@@ -1,5 +1,6 @@
 # This is a program to draw a digit.
 import turtle
+import time
 def drawgap():
     turtle.penup()
     turtle.fd(5)
@@ -32,9 +33,11 @@ def main():
     turtle.penup()
     turtle.pensize(10)
     turtle.speed(10)
-    turtle.fd(-300)
-    drawdate("20190112")
+    turtle.fd(-500)
+    now = time.strftime("%Y%m%d%H%M%S", time.gmtime())
+    drawdate(now)
     turtle.hideturtle()
     turtle.done()
+
 
 main()
