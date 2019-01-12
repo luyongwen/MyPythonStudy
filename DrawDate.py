@@ -1,8 +1,13 @@
 # This is a program to draw a digit.
 import turtle
+def drawgap():
+    turtle.penup()
+    turtle.fd(5)
 def drawline(draw):
+    drawgap()
     turtle.pendown() if draw else turtle.penup()
     turtle.fd(40)
+    drawgap()
     turtle.right(90)
 
 def drawdigit(digit):
