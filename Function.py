@@ -1,4 +1,4 @@
-def fact(n, m = 1):
+def fact(n, m = 2):
     s = 1
     for i in range(1, n):
         s = s * i
