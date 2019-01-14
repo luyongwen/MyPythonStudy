@@ -1,4 +1,5 @@
 # This is a program to draw a digit.
+# -*- coding: UTF-8 -*- 
 import turtle
 import time
 def drawgap():
