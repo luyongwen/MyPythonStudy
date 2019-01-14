@@ -25,8 +25,23 @@ def drawdigit(digit):
     turtle.fd(20)
 
 def drawdate(date):
+    turtle.pencolor("red")
     for i in date:
-        drawdigit(eval(i))
+        if i == "-":
+            turtle.write("年", font=("Arial", 18, "normal"))
+            turtle.penup()
+            turtle.fd(40)
+            turtle.pencolor("green")
+        elif i == "+":
+            turtle.write("月", font=("Arial", 18, "normal"))
+            turtle.penup()
+            turtle.fd(40)
+            turtle.pencolor("blue")
+        elif i == "=":
+            turtle.write("日", font=("Arial", 18, "normal"))
+        else:
+            drawdigit(eval(i))
+
 
 def main():
     turtle.setup(1280, 720)
@@ -34,10 +49,9 @@ def main():
     turtle.pensize(10)
     turtle.speed(10)
     turtle.fd(-500)
-    now = time.strftime("%Y%m%d%H%M%S", time.gmtime())
+    now = time.strftime("%Y-%m+%d=", time.gmtime())
     drawdate(now)
     turtle.hideturtle()
     turtle.done()
-
 
 main()

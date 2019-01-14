@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*- 
 
-from Tkinter import *
+from tkinter import *
 
 def resize(ev=None):
     label.config(font='Helvetica -%d bold' % scale.get())
