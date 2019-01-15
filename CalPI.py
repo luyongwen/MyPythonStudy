@@ -13,4 +13,4 @@ for i in range(N):
 end = time.perf_counter()
 pi =  inside / N * 4
 print(pi)
-print("The program spend {}s".format(end - start))
+print("The program spend {:.2f}s".format(end - start))
