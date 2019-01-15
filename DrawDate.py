@@ -49,7 +49,7 @@ def main():
     turtle.penup()
     turtle.pensize(10)
     turtle.speed(10)
-    turtle.fd(-500)
+    turtle.fd(-300)
     now = time.strftime("%Y-%m+%d=", time.gmtime())
     drawdate(now)
     turtle.hideturtle()
