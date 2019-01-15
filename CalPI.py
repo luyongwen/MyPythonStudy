@@ -8,7 +8,7 @@ def timetrans(t):
 import time
 import random
 inside = 0.0
-N = 10000000
+N = 1000000000
 start = time.perf_counter()
 for i in range(N):
     x = random.random()
@@ -18,7 +18,7 @@ for i in range(N):
     if i % 1000 == 0:
         need = int((now - start) / complete - (now - start))
         h, m, s = timetrans(need)
-    print("\r{:.2f}% {}h{}m{}s".format(complete * 100, h, m, s), end="")
+    print("\r{:.2f}% {}h{:0>2d}m{:0>2d}s".format(complete * 100, h, m, s), end="")
     z = pow(x * x + y * y, 0.5)
     if z <= 1:
         inside += 1
