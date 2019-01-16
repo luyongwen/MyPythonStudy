@@ -8,7 +8,7 @@ def timetrans(t):
 import time
 import random
 inside = 0.0
-N = 1000000000
+N = 100000000
 start = time.perf_counter()
 for i in range(N):
     x = random.random()
