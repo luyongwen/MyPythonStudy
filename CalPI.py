@@ -5,10 +5,12 @@ def timetrans(t):
     second = t % 3600 % 60
     return hour, minute, second
 
+
 import time
 import random
+
 inside = 0.0
-N = 100000000
+N = 1000000000
 start = time.perf_counter()
 for i in range(N):
     x = random.random()
@@ -23,6 +25,6 @@ for i in range(N):
     if z <= 1:
         inside += 1
 end = time.perf_counter()
-pi =  inside / N * 4
+pi = inside / N * 4
 print("\n", pi)
 print("The program spend {:.2f}s".format(end - start))
