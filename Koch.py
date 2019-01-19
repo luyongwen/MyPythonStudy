@@ -16,15 +16,15 @@ def main():
     turtle.penup()
     turtle.goto(-200, 100)
     turtle.pendown()
-    turtle.pensize(5)
+    turtle.pensize(2)
     turtle.speed(10)
     turtle.pencolor("blue")
-    level = 3
-    koch(400, level)
-    turtle.right(120)
-    koch(400, level)
-    turtle.right(120)
-    koch(400, level)
+    level = 2
+    i = 1
+    while i <= 3:
+        koch(400, level)
+        turtle.right(120)
+        i += 1
     turtle.hideturtle()
     turtle.done()
 
