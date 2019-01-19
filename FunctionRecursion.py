@@ -14,7 +14,7 @@ def reverse(s):
         return reverse(s[1:]) + s[0]
 
 
-a = func(10)
+a = func(100)
 print(a)
 str1 = reverse("")
 print(str1)
