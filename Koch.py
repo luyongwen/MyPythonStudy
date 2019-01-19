@@ -19,7 +19,7 @@ def main():
     turtle.pensize(5)
     turtle.speed(10)
     turtle.pencolor("blue")
-    level = 0
+    level = 3
     koch(400, level)
     turtle.right(120)
     koch(400, level)
