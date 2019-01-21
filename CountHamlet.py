@@ -22,4 +22,6 @@ hamletTxt = getTxt()
 dic = countWords(tranTxt(getTxt()))
 item = list(dic.items())
 item.sort(key=lambda x:x[1], reverse=True)
-print(item)
+for i in range(10):
+    word, count = item[i]
+    print("{}:{}".format(word, count), end="    ")
