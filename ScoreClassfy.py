@@ -6,9 +6,9 @@ try:
     elif score >= 80:
         grade = "B"
     elif score >= 70:
-        grade ="C"
+        grade = "C"
     elif score >= 60:
-        grade ="D"
+        grade = "D"
     print("Your score class is " + grade, end=".\n")
 except:
     print("Input error!")
