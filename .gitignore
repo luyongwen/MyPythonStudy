@@ -33,6 +33,7 @@ MANIFEST
 
 # Visual Studio Code ignore
 .vscode
+.vs
 
 # Installer logs
 pip-log.txt
