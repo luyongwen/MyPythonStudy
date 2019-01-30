@@ -1,4 +1,7 @@
 ﻿# Test for open a file.
 tf = open("f.txt", "rt" ,encoding="utf-8")
-print(tf.read())
+txt = tf.read(2)
+while txt != "":
+    txt = tf.read(2)
+    print(txt, "\n")
 tf.close();
