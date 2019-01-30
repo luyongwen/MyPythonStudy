@@ -3,5 +3,5 @@ tf = open("f.txt", "rt" ,encoding="utf-8")
 txt = tf.read(2)
 while txt != "":
     txt = tf.read(2)
-    print(txt, "\n")
+    print(txt)
 tf.close();
