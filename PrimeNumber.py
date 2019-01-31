@@ -1,6 +1,6 @@
 # Determine whether it is a prime number.
 def decideNum(num):
-    for i in range(1, int(num / 2)):
+    for i in range(2, int(num / 2 + 1)):
         if num % i == 0:
             return False
     return True
@@ -15,9 +15,17 @@ def main():
 
 
 def main2():
-    for i in range(2, 100, 1):
+    prnum = []
+    for i in range(2, 10000, 1):
        if  decideNum(i):
-           print(i)
+           prnum.append(i)
+    return prnum
 
 
-main2()
+result = main2()
+#print(result)
+for num in result:
+    if num == result[-1]:
+        print(num)
+    else:
+        print(num, end="、")
