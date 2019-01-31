@@ -4,7 +4,7 @@ def decArm(num):
     s = 0
     strnum = str(num)
     for c in strnum:
-        s = s + int(c)
+        s = s + pow(int(c), n)
     if s == num:
         return True
     else:
