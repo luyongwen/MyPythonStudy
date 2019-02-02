@@ -1,4 +1,5 @@
 # Calculate Armstrong number.
+# 判断是否为阿姆斯特朗数返回Ture或False
 def decArm(num):
     n = decNum(num)
     s = 0
@@ -11,6 +12,7 @@ def decArm(num):
         return False
 
 
+# 判断是几位数
 def decNum(num):
     n = 1
     while num // pow(10, n) != 0:
