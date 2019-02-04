@@ -1,7 +1,7 @@
 # Test for open a file.
 tf = open("hamlet.txt", "rt" ,encoding="utf-8")
 txt = tf.read()
-txt = txt.split("\n")
+txt = txt.split(" ")
 print(len(txt))
 #print(txt)
 #while txt != "":
