@@ -1,35 +1,25 @@
-# Before running other programs, please run this script.
+# 该脚本适用于Windows，Ubuntu系统，为其他脚本搭建运行环境。
 import os
 import platform
-# 判断Windows还是Linux，返回系统名称。
+# 判断Windows还是Ubuntu，返回系统名称。
 def decide_system():
     system = platform.system().lower()
     if system == "Linux".lower():
-        decide_Linux()
+        release = os.popen("lsb_release -a").read().lower()
+        if "ubuntu" in release:
+            return "Ubuntu"
+        else:
+            return "Unknown System"
     elif system == "Windows".lower():
         return "Windows"
     else:
         return "Unkown System"
 
-# 判断Linux发行版，返回发行版名称。
-def decide_Linux():
-    release = os.popen("lsb_release -a").read().lower()
-    if "ubuntu" in release:
-        return "Ubuntu"
-    elif "centos" in release:
-        return "CentOS"
-    elif "redhat" in release:
-        return "Redhat"
-    else:
-        return "Unknown System"
 
-# 搭建Linux系统环境。
-def system_enviroment(system_name):
-    if system_name in ["Redhat", "CentOS"]:
-        package_tool = "yum"
-    else:
-        package_tool = "apt"
-    os.system(package_tool + " install -y " + py_release)
+# 搭建Ubuntu系统环境。
+def system_enviroment():
+    os.system("apt update && apt upgrade -y && apt install python3.6 python-dev -y python3-pip")
+
 
 class Setup:
     def __init__(self,  system_name, target_list):
