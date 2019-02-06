@@ -58,7 +58,7 @@ def main():
             fail.append(target)
         else:
             success.append(target)
-    print_result()
+    print_result(fail, success)
 
 
 main()
