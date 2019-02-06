@@ -26,7 +26,6 @@ def system_enviroment():
 
 
 def print_result(fail, success):
-
     if len(fail) == 0:
         print("All package are installed.")
     else:
@@ -61,4 +60,4 @@ def main():
         else:
             success.append(target)
 main()
-print(print_result)
+print_result()
