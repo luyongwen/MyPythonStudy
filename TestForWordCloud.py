@@ -2,7 +2,7 @@
 import jieba
 import wordcloud
 import scipy.misc
-mask = scipy.misc.imread("3170207056岳竹霖.jpg")
+mask = scipy.misc.imread("wujiaoxing.jpg")
 string = open("三国.txt", "rt", encoding="utf-8").read()
 ls = jieba.lcut(string)
 txt = " ".join(ls)
