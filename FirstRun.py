@@ -38,7 +38,6 @@ def print_result(fail, success):
         print("\n")
 
 
-
 def main():
     system_name = decide_system()
     print(system_name)
@@ -59,5 +58,7 @@ def main():
             fail.append(target)
         else:
             success.append(target)
+    print_result()
+
+
 main()
-print_result()
