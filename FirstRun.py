@@ -44,6 +44,7 @@ def main():
     if system_name == "Windows":
         tool = "pip"
     elif system_name == "Ubuntu":
+        print("正在搭建相关系统环境")
         system_enviroment()
         tool = "pip3"
     else:
