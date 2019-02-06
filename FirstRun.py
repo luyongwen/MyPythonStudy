@@ -40,7 +40,7 @@ def print_result(fail, success):
 
 def main():
     system_name = decide_system()
-    print(system_name)
+    print("本机系统为：" + system_name)
     if system_name == "Windows":
         tool = "pip"
     elif system_name == "Ubuntu":
@@ -52,6 +52,7 @@ def main():
     ls = ["pillow", "jieba", "pyinstaller", "requests", "scipy", "numpy", "matplotlib", "wordcloud"]
     fail = []
     success = []
+    print("程序开始执行，开始安装相关库")
     for target in ls:
         result = os.system(tool + " install " + target)
         if result:
@@ -59,6 +60,7 @@ def main():
         else:
             success.append(target)
     print_result(fail, success)
+    nothing = input("按任意按键退出")
 
 
 main()
