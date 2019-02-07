@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # This is a fuction to calculate Fibonacci sequence.
 def Fibonacci_sequence(n):
     if n in [1, 2]:

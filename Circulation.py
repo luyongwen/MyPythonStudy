@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Print number.
 #import time
 #start = time.time()

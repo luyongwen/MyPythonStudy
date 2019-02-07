@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #DayDayUpQ2
 dayfactor = 0.005
 dayup = pow(1 + dayfactor, 365)

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # This is a resolve for hannoi.
 count = 0
 

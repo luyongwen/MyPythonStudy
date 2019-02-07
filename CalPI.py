@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # This is a program for PI calculation.
 def timetrans(t):
     hour = t // 3600

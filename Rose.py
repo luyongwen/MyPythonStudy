@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #RoseDraw.py
 import turtle as t
 # 定义一个曲线绘制函数

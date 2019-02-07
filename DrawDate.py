@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # This is a program to draw a digit.
 # -*- coding: UTF-8 -*- 
 import turtle

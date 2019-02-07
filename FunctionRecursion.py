@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # This is a test for function recursion.
 def func(n):
     if n == 0:

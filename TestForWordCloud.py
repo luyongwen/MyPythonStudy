@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # This is a program for test wordcloud.
 import jieba
 import wordcloud

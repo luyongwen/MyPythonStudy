@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # This is a program for count words in hamlet.
 def getTxt():
     txt = open("hamlet.txt", "r").read()
