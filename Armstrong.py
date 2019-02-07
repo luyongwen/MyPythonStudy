@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Calculate Armstrong number.
 # 判断是否为阿姆斯特朗数返回Ture或False
 def decArm(num):

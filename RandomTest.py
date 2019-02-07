@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #This is a test for random in python.
 import random
 random.seed(10)

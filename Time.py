@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Test for time.
 import time
 result = 0

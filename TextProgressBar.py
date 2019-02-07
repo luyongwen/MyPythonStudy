@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # This is a text progress bar.
 # -*- coding: UTF-8 -*-
 

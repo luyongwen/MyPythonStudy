@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Decide if it's a leap year.
 def decideYear(year):
     if year % 400 == 0:

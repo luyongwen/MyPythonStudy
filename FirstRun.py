@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # 该脚本适用于Windows，Ubuntu系统，为其他脚本搭建运行环境。
 import os
 import platform

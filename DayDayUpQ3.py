@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #DayDayUpQ3
 daybase = 1.0
 dayfactor = eval(input("Enter a number:"))
