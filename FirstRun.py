@@ -17,13 +17,24 @@ def decide_system():
         return "Unkown System"
 
 
-# 搭建Ubuntu系统环境。
-def system_enviroment():
-    result = os.system("apt update && apt upgrade -y && apt install python3.6 python3-dev -y python3-pip")
+# 搭建Windows,Ubuntu系统环境。
+def system_enviroment(system_name):
+    print("正在搭建系统环境")
+    if system_name == "Ubuntu":
+        result = os.system("apt update && apt upgrade -y &&\
+         apt install python3.6 python3-dev python3-pip -y &&\
+          python -m pip install --upgrade pip")
+        tool = "pip3"
+    if system_name == "Windows":
+        result = os.system("python -m pip install --upgrade pip")
+        tool = "pip"
+    else:
+        print("抱歉本程序不适合在该操作系统执行，程序退出")
+        sys.exit()
     if result:
         print("网络错误无法更新系统环境，程序退出，请尝试重新运行程序")
         sys.exit()
-
+    return tool
 
 def print_result(fail, success):
     if len(fail) == 0:
@@ -41,15 +52,7 @@ def print_result(fail, success):
 def main():
     system_name = decide_system()
     print("本机系统为：" + system_name)
-    if system_name == "Windows":
-        tool = "pip"
-    elif system_name == "Ubuntu":
-        print("正在搭建相关系统环境")
-        system_enviroment()
-        tool = "pip3"
-    else:
-        print("抱歉本程序不适合在该操作系统执行，程序退出")
-        sys.exit()
+    tool = system_enviroment(system_name)
     ls = ["pillow", "jieba", "pyinstaller", "requests", "scipy", "numpy", "matplotlib", "wordcloud"]
     fail = []
     success = []
@@ -61,7 +64,7 @@ def main():
         else:
             success.append(target)
     print_result(fail, success)
-    nothing = input("按任意按键退出")
+    nothing = input("程序执行完毕，按回车键退出")
 
 
 main()
