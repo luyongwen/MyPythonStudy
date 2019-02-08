@@ -3,11 +3,13 @@ import csv
 
 session = HTMLSession()
 
-file = open('movies.csv', 'w', newline='')
+file = open('movies.csv', 'w', newline='', encoding="utf-8")
 csvwriter = csv.writer(file)
 csvwriter.writerow(['名称', '年份'])
 
-links = ['https://movie.douban.com/subject/1292052/', 'https://movie.douban.com/subject/26752088/', 'https://movie.douban.com/subject/1962665/']
+links = ['https://movie.douban.com/subject/1292052/', \
+    'https://movie.douban.com/subject/26752088/', \
+    'https://movie.douban.com/subject/1962665/']
 
 for link in links:
     r = session.get(link)
