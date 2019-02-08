@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #DayDayUpQ4
 import time
 def dayup(df):

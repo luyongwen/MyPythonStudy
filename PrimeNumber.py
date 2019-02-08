@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Determine whether it is a prime number.
 def decideNum(num):
     for i in range(2, int(num / 2 + 1)):

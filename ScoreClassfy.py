@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # This is a program for classfy score.
 try:
     score = eval(input("Enter your score: "))
