@@ -21,12 +21,16 @@ def decide_system():
 # 搭建Windows,Ubuntu系统环境。
 def system_enviroment(system_name):
     print("正在搭建系统环境")
+    result = os.system("git config --global user.name 'luyongwen' &&\
+            git config --global user.email 'luyongwen@hotmail.com'")
+    if result:
+        print("git设置错误，请手动设置")
     if system_name == "Ubuntu":
         result = os.system("apt update && apt upgrade -y &&\
          apt install python3.6 python3-dev python3-pip -y &&\
-          python -m pip install --upgrade pip")
+          python3 -m pip install --upgrade pip")
         tool = "pip3"
-    if system_name == "Windows":
+    elif system_name == "Windows":
         result = os.system("python -m pip install --upgrade pip")
         tool = "pip"
     else:
@@ -69,3 +73,4 @@ def main():
 
 
 main()
+#print(decide_system())
