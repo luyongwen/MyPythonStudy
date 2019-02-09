@@ -68,6 +68,15 @@ def main():
             fail.append(target)
         else:
             success.append(target)
+    if "pyinstaller" in fail:
+        print("pip安装pyinstaller失败，正在尝试本地安装")
+        if system_name == "Windows":
+            ver = "python"
+        else:
+            ver = "python3"
+        result = os.system("cd PyInstaller-3.4 && " + ver +"setup.py install")
+        if result:
+            print("本地安装pyinstaller失败请自行安装")
     print_result(fail, success)
     nothing = input("程序执行完毕，按回车键退出")
 
