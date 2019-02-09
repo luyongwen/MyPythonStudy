@@ -77,6 +77,9 @@ def main():
         result = os.system("cd PyInstaller-3.4 && " + ver +" setup.py install")
         if result:
             print("本地安装pyinstaller失败请自行安装")
+        else:
+            fail.remove("pyinstaller")
+            success.append("pyinstaller")
     print_result(fail, success)
     nothing = input("程序执行完毕，按回车键退出")
 
