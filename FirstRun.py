@@ -74,7 +74,7 @@ def main():
             ver = "python"
         else:
             ver = "python3"
-        result = os.system("cd PyInstaller-3.4 && " + ver +"setup.py install")
+        result = os.system("cd PyInstaller-3.4 && " + ver +" setup.py install")
         if result:
             print("本地安装pyinstaller失败请自行安装")
     print_result(fail, success)
